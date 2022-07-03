@@ -40,11 +40,12 @@
 	        <!-- Tab panes-->
 	        <div class="tab-content tab-content-1">
 	          <div class="tab-pane fade show active" id="tabs-4-1">
+	            <img src="{{asset('images/team/1656866815.jpeg')}}" alt="" width="225" height="118"/>
+	          	
 	            <h4>RABINDRA BUDHATHOKI</h4>
 	            	
 	            <p>{!! $company_info->message !!}</p>
 				
-	            <img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
 	          </div>
 	          <div class="tab-pane fade" id="tabs-4-2">
 	            <h4>Providing quality services</h4>

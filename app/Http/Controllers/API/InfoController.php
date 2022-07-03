@@ -57,20 +57,20 @@ class InfoController extends Controller
     {
         // return $request->get("aboutus");
         $row = CompanyInfo::first();
+        // return $row;
 
         if($request->get("aboutus")){
+            // return $request->get("aboutus");
             if($row){
                 $row->update([
                     'aboutus' => $request->get("aboutus")
                 ]);
+                $row->save();
             }else{
                 CompanyInfo::create([
                     'aboutus' => $request->get("aboutus")
                 ]);
             }
-        }
-        if($request->message){
-
         }
         return ["message" => "Updated"];
     } 
@@ -85,6 +85,7 @@ class InfoController extends Controller
                 $row->update([
                     'message' => $request->get("message")
                 ]);
+                $row->save();
             }else{
                 CompanyInfo::create([
                     'message' => $request->get("message")
@@ -110,6 +111,7 @@ class InfoController extends Controller
                 'location' => $request->get("location"),
                 'mail' => $request->get("mail")
             ]);
+            $row->save();
         }else{
             CompanyInfo::create([
                 'telephone' => $request->get("telephone"),
@@ -133,6 +135,7 @@ class InfoController extends Controller
                 'fb_link' => $request->get("fb_link"),
                 'tw_link' => $request->get("tw_link"),
             ]);
+            $row->save();
         }else{
             CompanyInfo::create([
                 'fb_link' => $request->get("fb_link"),
@@ -154,6 +157,7 @@ class InfoController extends Controller
                 'clients' => $request->get("clients"),
                 'partners' => $request->get("partners"),
             ]);
+            $row->save();
         }else{
             CompanyInfo::create([
                 'projects' => $request->get("projects"),
