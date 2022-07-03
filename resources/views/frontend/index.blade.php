@@ -8,6 +8,8 @@
   <section class="section swiper-container swiper-slider swiper-slider-2" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
     <div class="swiper-wrapper text-sm-left">
       
+      @isset($sliders)
+
       @foreach($sliders as $slider)
       <div class="swiper-slide context-dark" data-slide-bg="{{asset('images/slider/'.$slider->image)}}">
         <div class="swiper-slide-caption section-md">
@@ -25,6 +27,8 @@
         </div>
       </div>
       @endforeach
+@endisset
+
      
     </div>
     <!-- Swiper Pagination-->
@@ -259,9 +263,14 @@
   <section class="section parallax-container" data-parallax-img="{{asset('images/featured/main2.jpg')}}">
     <div class="parallax-content section-inset-9 context-dark">
       <div class="container">
+         @isset($company_info)
         <div class="row row-30 justify-content-center justify-content-xl-between align-items-lg-end">
           <div class="col-sm-6 col-md-4">
             <div class="counter-classic">
+
+
+             
+
               <h3 class="counter-classic-number"><span class="counter">{{ $company_info->projects }}</span>
               </h3>
               <h6 class="counter-classic-title">projects</h6>
@@ -285,6 +294,8 @@
             </div>
           </div>
         </div>
+              @endisset
+        
       </div>
     </div>
   </section>

@@ -9,6 +9,7 @@
                 <div class="footer-classic-header">
                   <h6 class="footer-classic-title">Quick links</h6>
                 </div>
+                 @isset($company_info)
                 <div class="footer-classic-body">
                   <ul class="footer-classic-list d-inline-block d-sm-block">
                     <li><a href="#">Our History</a></li>
@@ -25,10 +26,16 @@
                     <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                   </ul>
                 </div>
+              @endisset
+                
               </div>
+
               <!-- first box end-->
 
               <!-- second box -->
+
+              @isset($company_info)
+
               <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay=".1s">
                 <div class="footer-classic-header">
                   <div class="box-width-230">
@@ -54,6 +61,8 @@
                   </div>
                 </div>
               </div>
+              @endisset
+
               <!-- second box end-->
 
               <!-- third box start map -->
